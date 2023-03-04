@@ -14,7 +14,9 @@
 		"vscode": {
 			"settings": {},
 			"extensions": [
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"svelte.svelte-vscode",
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	},
