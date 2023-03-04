@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./bolt-calculator /favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./bolt-calculator /_app/immutable/assets/_page.01fe0791.css" rel="stylesheet">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/entry/start.881c6d3d.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/chunks/index.1ef3c7bd.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/chunks/singletons.2c05f0d7.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/entry/app.2c2d4be6.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/entry/layout.svelte.79f753de.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/entry/_layout.js.984db11e.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/chunks/_layout.da46b06b.js">
+		<link rel="modulepreload" href="./bolt-calculator /_app/immutable/entry/_page.svelte.c9b7191f.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+
+
+<main class="max-w-2xl mx-auto px-4 lg:px-0 mt-8 lg:mt-24"><h1 class="text-3xl font-bold"><span class="text-green-600">Bolt</span> Calculator</h1>
+  <small class="text-gray-500">By <a href="http://pedak.me" target="_blank" rel="noreferrer">Andry Pedak</a></small>
+
+  <hr class="mt-4 mb-6">
+
+  <label class="block mb-4"><span class="block mb-1">Total Minutes</span>
+    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" min="0" value="60">
+    <input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-green-600" type="range" min="0" max="180" value="60"></label>
+  
+  <label class="block mb-8"><span class="block mb-1">Total Kilometres</span>
+    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" min="0" value="30">
+    <input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-green-600" type="range" min="0" max="360" value="30"></label>
+  
+  <div class="grid gap-4 auto-cols-fr"><div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;"><div><h2 class="font-semibold text-base">Toyota Yaris</h2>
+          <p>0.13 €/<span class="text-xs">min</span> | 0.22 €/<span class="text-xs">km</span></p></div>
+
+        <p class="text-2xl font-bold text-green-600" title="7.8€ + 6.6€">14.4 €</p>
+      </div><div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;"><div><h2 class="font-semibold text-base">VW T-Roc</h2>
+          <p>0.16 €/<span class="text-xs">min</span> | 0.25 €/<span class="text-xs">km</span></p></div>
+
+        <p class="text-2xl font-bold" title="9.6€ + 7.5€">17.1 €</p>
+      </div><div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;"><div><h2 class="font-semibold text-base">Skoda Kamiq</h2>
+          <p>0.16 €/<span class="text-xs">min</span> | 0.25 €/<span class="text-xs">km</span></p></div>
+
+        <p class="text-2xl font-bold" title="9.6€ + 7.5€">17.1 €</p>
+      </div><div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;"><div><h2 class="font-semibold text-base">Audi Q2</h2>
+          <p>0.17 €/<span class="text-xs">min</span> | 0.25 €/<span class="text-xs">km</span></p></div>
+
+        <p class="text-2xl font-bold" title="10.2€ + 7.5€">17.7 €</p>
+      </div><div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;"><div><h2 class="font-semibold text-base">Toyota RAV4</h2>
+          <p>0.3 €/<span class="text-xs">min</span> | 0.25 €/<span class="text-xs">km</span></p></div>
+
+        <p class="text-2xl font-bold" title="18.0€ + 7.5€">25.5 €</p>
+      </div></div></main>
+
+
+			
+			<script>
+				{
+					__sveltekit_mww1y1 = {
+						env: {},
+						assets: "/bolt-calculator ",
+						base: new URL("./bolt-calculator ", location).pathname,
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./bolt-calculator /_app/immutable/entry/start.881c6d3d.js"),
+						import("./bolt-calculator /_app/immutable/entry/app.2c2d4be6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_mww1y1.element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
