@@ -71,7 +71,9 @@
 
 <main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
   <h1 class="text-3xl font-bold"><span class="text-green-600">Bolt Drive</span> Calculator</h1>
-  <small class="text-gray-500">By <a href="http://pedak.me" target="_blank" rel="noreferrer" class="hover:underline">Andry Pedak</a> | Prices don't match? <a href="https://github.com/aanndryyyy/bolt-calculator/blob/main/src/cars.ts" target="_blank" rel="noreferrer" class="underline">Contribute</a></small>
+  <small class="text-gray-500">
+    By <a href="http://pedak.me" target="_blank" rel="noreferrer" class="hover:underline">Andry Pedak</a> | <a href="https://github.com/aanndryyyy/bolt-calculator" target="_blank" rel="noreferrer" class="hover:underline">GitHub</a> | Prices don't match? <a href="https://github.com/aanndryyyy/bolt-calculator/blob/main/src/cars.ts" target="_blank" rel="noreferrer" class="underline">Contribute</a>
+  </small>
 
   <hr class="mt-4 mb-6">
 
@@ -100,9 +102,11 @@
 
         <div class="text-2xl font-bold text-right" class:text-green-600={i === 0}>
           {(get_duration_price(totalMinutes, car) + totalKilometres*car.price.km).toFixed(2)} &euro;
-          <span class="block text-xs font-normal text-blue-600">{get_discount_total(totalMinutes, car).toFixed(2)} &euro;</span>
+          <span class="block text-xs font-normal text-blue-600" title="Long-term rent discount">{get_discount_total(totalMinutes, car).toFixed(0)}&euro;</span>
         </div>
       </div>
     {/each}
   </div>
+
+  <p class="font-sm text-gray-500 text-center mt-8">Unofficial. The frequency of rate changes in unknown.</p>
 </main>
