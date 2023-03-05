@@ -65,7 +65,7 @@
   <meta name="description" content="Quickly see total trip cost before using Bolt Drive."/>
 </svelte:head>
 
-<main class="max-w-2xl mx-auto px-4 lg:px-0 mt-4 lg:mt-24">
+<main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
   <h1 class="text-3xl font-bold"><span class="text-green-600">Bolt Drive</span> Calculator</h1>
   <small class="text-gray-500">By <a href="http://pedak.me" target="_blank" rel="noreferrer" class="hover:underline">Andry Pedak</a> | Prices don't match? <a href="https://github.com/aanndryyyy/bolt-calculator/blob/main/src/cars.js" target="_blank" rel="noreferrer" class="underline">Contribute</a></small>
 
