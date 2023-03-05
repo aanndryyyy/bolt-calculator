@@ -3,20 +3,63 @@
   @tailwind utilities;
 </style>
 
-<script>
+<script lang="ts">
   import cars from "../cars";
+  import type { Car as CarInterface } from '../Car';
 	
-	let totalMinutes = 60;
-	let totalKilometres = 30;
+	let totalMinutes: number    = 60;
+	let totalKilometres: number = 30;
 
-  cars.sort( function(a,b) {
+  cars.sort( function( a, b ) {
     var firstPer = totalMinutes*a.price.minute + totalKilometres*a.price.km
     var secPer = totalMinutes*b.price.minute + totalKilometres*b.price.km
 
     return firstPer - secPer;
   });
-</script>
 
+  function breakdown_minutes( theTotalMinutes: number ) {
+    
+    const days    = Math.floor( theTotalMinutes / ( 60 * 24 ) );
+    const hours   = Math.floor( theTotalMinutes / 60 ) % 24;
+    const minutes = theTotalMinutes % 60;
+
+    return { days, hours, minutes };
+  }
+
+  function get_duration_price( theTotalMinutes: number, car: CarInterface  ) {
+    
+    let { days, hours, minutes } = breakdown_minutes( theTotalMinutes );
+
+    if ( ( minutes + hours*60 )*car.price.minute >= car.price.day ) {
+      
+      days++;
+      hours = 0;
+      minutes = 0;
+    }
+    
+    if ( minutes*car.price.minute >= car.price.hour ) {
+      hours++;
+      minutes = 0;
+    }
+
+    return days*car.price.day + hours*car.price.hour + minutes*car.price.minute;
+  }
+
+  function get_discount_total( theTotalMinutes: number, car: CarInterface ) {
+
+    return get_duration_price( theTotalMinutes, car ) - totalMinutes*car.price.minute;
+  }
+
+  function get_formatted_duration( theTotalMinutes: number ) {
+
+    const { days, hours, minutes } = breakdown_minutes( theTotalMinutes );
+
+    return days + " days, " + hours + " hours, " + minutes + " minutes";
+  }
+
+  $: formattedDuration = get_formatted_duration( totalMinutes )
+</script>
+    
 <svelte:head>
   <title>Calculate Bolt Drive fare beforehand</title>
   <meta name="description" content="Quickly see total trip cost before using Bolt Drive."/>
@@ -30,14 +73,17 @@
 
   <label class="block mb-4">
     <span class="block mb-1">Total Minutes</span>
-    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={totalMinutes} min=0>
-    <input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-green-600" type=range bind:value={totalMinutes} min=0 max=180>
+    <div class="flex-col sm:flex-row flex gap-4">
+      <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalMinutes} min=0>
+      <input class="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={formattedDuration} min=0 disabled>
+    </div>
+    <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalMinutes} min=0 max=4320>
   </label>
   
   <label class="block mb-8">
     <span class="block mb-1">Total Kilometres</span>
-    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={totalKilometres} min=0>
-    <input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-green-600" type=range bind:value={totalKilometres} min=0 max=360>
+    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalKilometres} min=0>
+    <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalKilometres} min=0 max=360>
   </label>
   
   <div class="grid gap-4 auto-cols-fr">
@@ -45,12 +91,13 @@
       <div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;">
         <div>
           <h2 class="font-semibold text-base">{car.name}</h2>
-          <p>{car.price.minute} &euro;/<span class="text-xs">min</span> | {car.price.km} &euro;/<span class="text-xs">km</span></p>
+          <p class="text-gray-500">&euro; {car.price.minute}/<span class="text-xs">min</span> | &euro; {car.price.km}/<span class="text-xs">km</span></p>
         </div>
 
-        <p class="text-2xl font-bold" class:text-green-600={i === 0}
-          title="{(totalMinutes*car.price.minute).toFixed(1)}€ + {(totalKilometres*car.price.km).toFixed(1)}€"
-          >{(totalMinutes*car.price.minute + totalKilometres*car.price.km).toFixed(1)} &euro;</p>
+        <div class="text-2xl font-bold text-right" class:text-green-600={i === 0}>
+          {(get_duration_price(totalMinutes, car) + totalKilometres*car.price.km).toFixed(2)} &euro;
+          <span class="block text-xs font-normal text-blue-600">{get_discount_total(totalMinutes, car).toFixed(2)} &euro;</span>
+        </div>
       </div>
     {/each}
   </div>

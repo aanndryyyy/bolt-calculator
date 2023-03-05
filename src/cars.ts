@@ -1,5 +1,6 @@
-
-const cars = [
+import type { Car } from './Car';
+ 
+const cars: Car[] = [
   {
     name: "VW T-Roc",
     price: {
