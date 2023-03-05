@@ -1,8 +1,10 @@
+import { CarType } from './Car';
 import type { Car } from './Car';
  
 const cars: Car[] = [
   {
     name: "Audi A1",
+    type: CarType.Everyday,
     price: {
       km:     0.24,
       minute: 0.16,
@@ -12,6 +14,7 @@ const cars: Car[] = [
   },
   {
     name: "Audi A3",
+    type: CarType.Everyday,
     price: {
       km:     0.25,
       minute: 0.18,
@@ -21,6 +24,7 @@ const cars: Car[] = [
   },
   {
     name: "Audi e-tron",
+    type: CarType.Premium,
     price: {
       km:     0.25,
       minute: 0.69,
@@ -30,6 +34,7 @@ const cars: Car[] = [
   },
   {
     name: "Audi Q2",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.17,
@@ -39,6 +44,7 @@ const cars: Car[] = [
   },
   {
     name: "Hyundai i20",
+    type: CarType.Everyday,
     price: {
       km:     0.24,
       minute: 0.13,
@@ -48,6 +54,7 @@ const cars: Car[] = [
   },
   {
     name: "Kia Picanto",
+    type: CarType.Everyday,
     price: {
       km:     0.22,
       minute: 0.13,
@@ -57,6 +64,7 @@ const cars: Car[] = [
   },
   {
     name: "Mercedes Sprinter",
+    type: CarType.Cargo,
     price: {
       km:     0.27,
       minute: 0.15,
@@ -66,6 +74,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota Corolla",
+    type: CarType.Everyday,
     price: {
       km:     0.25,
       minute: 0.15,
@@ -75,6 +84,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota C-HR",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.18,
@@ -84,6 +94,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota Land Cruiser",
+    type: CarType.Premium,
     price: {
       km:     0.34,
       minute: 0.49,
@@ -93,6 +104,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota RAV4",
+    type: CarType.Premium,
     price: {
       km:     0.25,
       minute: 0.30,
@@ -102,6 +114,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota Yaris",
+    type: CarType.Everyday,
     price: {
       km:     0.22,
       minute: 0.13,
@@ -111,6 +124,7 @@ const cars: Car[] = [
   },
   {
     name: "Toyota Yaris Cross",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.18,
@@ -120,6 +134,7 @@ const cars: Car[] = [
   },
   {
     name: "VW Arteon",
+    type: CarType.Premium,
     price: {
       km:     0.25,
       minute: 0.30,
@@ -129,6 +144,7 @@ const cars: Car[] = [
   },
   {
     name: "VW e-Crafter",
+    type: CarType.Cargo,
     price: {
       km:     0.27,
       minute: 0.13,
@@ -138,6 +154,7 @@ const cars: Car[] = [
   },
   {
     name: "VW Crafter",
+    type: CarType.Cargo,
     price: {
       km:     0.27,
       minute: 0.13,
@@ -147,6 +164,7 @@ const cars: Car[] = [
   },
   {
     name: "VW T-Cross",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.16,
@@ -156,6 +174,7 @@ const cars: Car[] = [
   },
   {
     name: "VW T-Roc",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.16,
@@ -165,6 +184,7 @@ const cars: Car[] = [
   },
   {
     name: "VW T-Roc Cabrio",
+    type: CarType.Premium,
     price: {
       km:     0.25,
       minute: 0.16,
@@ -174,6 +194,7 @@ const cars: Car[] = [
   },
   {
     name: "Škoda Scala",
+    type: CarType.Everyday,
     price: {
       km:     0.22,
       minute: 0.13,
@@ -183,6 +204,7 @@ const cars: Car[] = [
   },
   {
     name: "Škoda Fabia",
+    type: CarType.Everyday,
     price: {
       km:     0.24,
       minute: 0.13,
@@ -192,6 +214,7 @@ const cars: Car[] = [
   },
   {
     name: "Škoda Kamiq",
+    type: CarType.EverydaySuv,
     price: {
       km:     0.25,
       minute: 0.16,
