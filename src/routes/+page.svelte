@@ -4,6 +4,7 @@
 </style>
 
 <script lang="ts">
+  import ogImage from "../images/og-image.png";
   import cars from "../cars";
   import type { Car as CarInterface } from '../Car';
 	
@@ -64,9 +65,9 @@
   <meta name="description" content="Quickly see total trip cost before using Bolt Drive."/>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <meta property="og:image" content="https://aanndryyyy.github.io/bolt-calculator/og-image.png" />
-  <meta name="twitter:image" content="https://aanndryyyy.github.io/bolt-calculator/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
