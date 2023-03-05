@@ -62,6 +62,7 @@
 <svelte:head>
   <title>Calculate Bolt Drive fare beforehand</title>
   <meta name="description" content="Quickly see total trip cost before using Bolt Drive."/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </svelte:head>
 
 <main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
