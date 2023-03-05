@@ -483,6 +483,8 @@ video {
   margin-bottom: 2rem;
 }.mt-4 {
   margin-top: 1rem;
+}.mt-8 {
+  margin-top: 2rem;
 }.block {
   display: block;
 }.flex {
@@ -546,6 +548,8 @@ video {
 }.py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}.text-center {
+  text-align: center;
 }.text-right {
   text-align: right;
 }.text-2xl {
