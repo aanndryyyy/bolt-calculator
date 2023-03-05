@@ -10,13 +10,6 @@
 	let totalMinutes: number    = 60;
 	let totalKilometres: number = 30;
 
-  cars.sort( function( a, b ) {
-    var firstPer = totalMinutes*a.price.minute + totalKilometres*a.price.km
-    var secPer = totalMinutes*b.price.minute + totalKilometres*b.price.km
-
-    return firstPer - secPer;
-  });
-
   function breakdown_minutes( theTotalMinutes: number ) {
     
     const days    = Math.floor( theTotalMinutes / ( 60 * 24 ) );
@@ -57,7 +50,13 @@
     return days + " days, " + hours + " hours, " + minutes + " minutes";
   }
 
-  $: formattedDuration = get_formatted_duration( totalMinutes )
+  $: formattedDuration = get_formatted_duration( totalMinutes );
+  $: sortedCars = cars.sort( function( a, b ) {
+    var firstPer = get_duration_price( totalMinutes, a ) + totalKilometres*a.price.km
+    var secPer = get_duration_price( totalMinutes, b ) + totalKilometres*b.price.km
+
+    return firstPer - secPer;
+  });
 </script>
     
 <svelte:head>
@@ -85,10 +84,10 @@
     <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalKilometres} min=0>
     <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalKilometres} min=0 max=360>
   </label>
-  
+
   <div class="grid gap-4 auto-cols-fr">
-    {#each cars as car, i}
-      <div class="flex justify-between items-center p-4 shadow-md rounded-md" style="border:1px solid black;">
+    {#each sortedCars as car, i (car.name)}
+      <div class="flex justify-between items-center p-4 shadow-md rounded-md border border-gray-500" class:border-green-600={i === 0} class:border-2={i === 0}>
         <div>
           <h2 class="font-semibold text-base">{car.name}</h2>
           <p class="text-gray-500">&euro; {car.price.minute}/<span class="text-xs">min</span> | &euro; {car.price.km}/<span class="text-xs">km</span></p>
