@@ -68,6 +68,8 @@
   <meta property="og:image" content={ogImage} />
   <meta name="twitter:image" content={ogImage} />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <script defer data-domain="aanndryyyy.github.io/bolt-calculator" src="https://plausible.io/js/script.js"></script>
 </svelte:head>
 
 <main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
