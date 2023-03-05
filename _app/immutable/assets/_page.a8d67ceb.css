@@ -470,6 +470,9 @@ video {
 }.mx-auto {
   margin-left: auto;
   margin-right: auto;
+}.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }.mb-1 {
   margin-bottom: 0.25rem;
 }.mb-4 {
@@ -586,6 +589,9 @@ video {
 }.focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}.disabled\:bg-gray-200:disabled {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }@media (min-width: 640px) {
 
   .sm\:flex-row {
@@ -593,8 +599,9 @@ video {
   }
 }@media (min-width: 1024px) {
 
-  .lg\:mt-24 {
+  .lg\:my-24 {
     margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .lg\:px-0 {

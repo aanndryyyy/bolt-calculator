@@ -5,15 +5,15 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page.0633c2ca.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.7384ea0d.js">
+		<link href="./_app/immutable/assets/_page.40d2595e.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.0c245ca0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.9ca11600.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.93a8bad8.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.cdc2f008.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.8a3265dd.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.53b44fc7.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/layout.svelte.e7837f31.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.js.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.aca18f34.js"><title>Calculate Bolt Drive fare beforehand</title><!-- HEAD_svelte-5prrfv_START --><meta name="description" content="Quickly see total trip cost before using Bolt Drive."><!-- HEAD_svelte-5prrfv_END -->
+		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.5084c3dc.js"><title>Calculate Bolt Drive fare beforehand</title><!-- HEAD_svelte-5prrfv_START --><meta name="description" content="Quickly see total trip cost before using Bolt Drive."><!-- HEAD_svelte-5prrfv_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -21,14 +21,14 @@
 
 
 
-<main class="max-w-2xl mx-auto px-4 lg:px-0 mt-4 lg:mt-24"><h1 class="text-3xl font-bold"><span class="text-green-600">Bolt Drive</span> Calculator</h1>
+<main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24"><h1 class="text-3xl font-bold"><span class="text-green-600">Bolt Drive</span> Calculator</h1>
   <small class="text-gray-500">By <a href="http://pedak.me" target="_blank" rel="noreferrer" class="hover:underline">Andry Pedak</a> | Prices don&#39;t match? <a href="https://github.com/aanndryyyy/bolt-calculator/blob/main/src/cars.js" target="_blank" rel="noreferrer" class="underline">Contribute</a></small>
 
   <hr class="mt-4 mb-6">
 
   <label class="block mb-4"><span class="block mb-1">Total Minutes</span>
     <div class="flex-col sm:flex-row flex gap-4"><input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="number" min="0" value="60">
-      <input class="appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" min="0" disabled value="0 days, 1 hours, 0 minutes"></div>
+      <input class="appearance-none block w-full disabled:bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" min="0" disabled value="0 days, 1 hours, 0 minutes"></div>
     <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type="range" min="0" max="4320" value="60"></label>
   
   <label class="block mb-8"><span class="block mb-1">Total Kilometres</span>
@@ -151,7 +151,7 @@
 			
 			<script>
 				{
-					__sveltekit_1xhcn14 = {
+					__sveltekit_7jlsf0 = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -160,10 +160,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.7384ea0d.js"),
-						import("./_app/immutable/entry/app.cdc2f008.js")
+						import("./_app/immutable/entry/start.0c245ca0.js"),
+						import("./_app/immutable/entry/app.53b44fc7.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1xhcn14.element, {
+						kit.start(app, __sveltekit_7jlsf0.element, {
 							node_ids: [0, 2],
 							data,
 							form: null,
