@@ -75,7 +75,7 @@
     <span class="block mb-1">Total Minutes</span>
     <div class="flex-col sm:flex-row flex gap-4">
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalMinutes} min=0>
-      <input class="appearance-none block w-full disabled:bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={formattedDuration} min=0 disabled>
+      <input class="appearance-none block w-full disabled:bg-gray-200 disabled:text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={formattedDuration} min=0 disabled>
     </div>
     <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalMinutes} min=0 max=4320>
   </label>
