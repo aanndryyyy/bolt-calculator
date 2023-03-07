@@ -96,13 +96,13 @@
       <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalMinutes} min=0>
       <input class="appearance-none block w-full disabled:bg-gray-200 disabled:text-gray-500 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=text bind:value={formattedDuration} min=0 disabled>
     </div>
-    <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalMinutes} min=0 max=4320>
+    <input tabindex="-1" class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalMinutes} min=0 max=4320>
   </label>
   
   <label class="block mb-8">
     <span class="block mb-1">Total Kilometres</span>
     <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type=number bind:value={totalKilometres} min=0>
-    <input class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalKilometres} min=0 max=360>
+    <input tabindex="-1" class="w-full h-2 bg-green-600 rounded-lg appearance-none cursor-pointer" type=range bind:value={totalKilometres} min=0 max=360>
   </label>
 
   <div class="grid gap-4 auto-cols-fr">
