@@ -82,7 +82,7 @@
   <script defer data-domain="aanndryyyy.github.io/bolt-calculator" src="https://plausible.io/js/script.outbound-links.js"></script>
 </svelte:head>
 
-<main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 lg:my-24">
+<main class="max-w-2xl mx-auto px-4 lg:px-0 my-4 mb-16 lg:my-24">
   <h1 class="text-3xl font-bold"><span class="text-green-600">Bolt Drive</span> Calculator</h1>
   <small class="text-gray-500">
     By <a href="http://pedak.me" target="_blank" rel="noreferrer" class="hover:underline">Andry Pedak</a> | <a href="https://github.com/aanndryyyy/bolt-calculator" target="_blank" rel="noreferrer" class="hover:underline">GitHub</a> | Prices don't match? <a href="https://github.com/aanndryyyy/bolt-calculator/blob/main/src/cars.ts" target="_blank" rel="noreferrer" class="underline">Contribute</a>
@@ -122,4 +122,5 @@
   </div>
 
   <p class="font-sm text-gray-500 text-center mt-8">Unofficial. The frequency of rate changes in unknown.</p>
+  <p class="font-sm text-gray-500 text-center mt-8"><a href="https://plausible.io/aanndryyyy.github.io%2Fbolt-calculator/" target="_blank" rel="noreferrer">Analytics</a></p>
 </main>
